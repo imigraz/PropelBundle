@@ -56,7 +56,7 @@ class PropelDataCollector extends DataCollector
      *
      * @return array<int, array{sql: string, connection: string, time: int|float, memory: int, trace: TraceStub}> Queries
      */
-    public function getQueries(): array
+    public function getQueries()
     {
         return $this->data['queries'];
     }
@@ -91,7 +91,7 @@ class PropelDataCollector extends DataCollector
      *
      * @return array<int, array{sql: string, connection: string, time: int|float, memory: int, trace: TraceStub}> An array of Build objects
      */
-    private function buildQueries(): array
+    private function buildQueries()
     {
         return $this->logger->getQueries();
     }
