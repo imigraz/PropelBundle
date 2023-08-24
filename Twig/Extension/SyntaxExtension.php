@@ -19,7 +19,7 @@ namespace Propel\Bundle\PropelBundle\Twig\Extension;
  */
 class SyntaxExtension extends \Twig\Extension\AbstractExtension
 {
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new \Twig\TwigFilter('format_sql', [$this, 'formatSQL'], ['is_safe' => ['html']]),
@@ -40,7 +40,7 @@ class SyntaxExtension extends \Twig\Extension\AbstractExtension
      *
      * @return string
      */
-    public function formatMemory($bytes, $precision = 3)
+    public function formatMemory($bytes, $precision = 3): string
     {
         $absBytes = abs($bytes);
         $sign = ($bytes == $absBytes) ? 1 : -1;
